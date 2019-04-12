@@ -16,18 +16,21 @@ GenQueue<TempQ>::~GenQueue()
 
 }
 
+// returns front element 
 template <class TempQ>
 TempQ GenQueue<TempQ>::qFront() 
 {
     return front->data;
 }
 
+// returns back element 
 template <class TempQ>
 TempQ GenQueue<TempQ>::qBack() 
 {
     return back->data;
 }
 
+// prints queue 
 template <class TempQ>
 void GenQueue<TempQ>::printQ() 
 {
@@ -47,18 +50,21 @@ void GenQueue<TempQ>::printQ()
     }
 }
 
+// checks if queue is empty 
 template <class TempQ>
 bool GenQueue<TempQ>::isEmpty() 
 {
     return (numElem == 0);
 }
 
+// returns size of queue 
 template <class TempQ>
 int GenQueue<TempQ>::getSize() 
 {
     return numElem;
 }
 
+// adds element to queue 
 template <class TempQ>
 void GenQueue<TempQ>::enqueue(TempQ d) 
 {
@@ -78,6 +84,7 @@ void GenQueue<TempQ>::enqueue(TempQ d)
     numElem++;
 }
 
+// returns and nulls queue element 
 template <class TempQ>
 TempQ GenQueue<TempQ>::dequeue() 
 {

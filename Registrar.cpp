@@ -30,6 +30,7 @@ Registrar::~Registrar()
     delete [] medianArray;
 }
 
+// takes in text file 
 bool Registrar::getFile(string file) 
 {
     string line;
@@ -94,18 +95,17 @@ bool Registrar::getFile(string file)
     return true;
 }
 
+// keeps track of time ticks 
 bool Registrar::timer(int t) 
 {
     for(int i = 0; i < totalWindows; ++i) 
     {
         if(windowArr[i]->windowTime > 0) 
         {
-            //Decreases when Student at Window
             windowArr[i]->windowTime--;
         }
         else 
         {
-            //Increases when Student NOT at Window
             windowArr[i]->idleTime++;
         }
     }
@@ -126,6 +126,7 @@ bool Registrar::timer(int t)
     return true;
 }
 
+// mean of student wait times 
 double Registrar::meanStud() 
 {
     ListNode<int> *curr = waitStats.front;
@@ -148,6 +149,7 @@ double Registrar::meanStud()
     return minWait;
 }
 
+// median student wait times 
 double Registrar::medianStud() 
 {
     ListNode<int> *curr = waitStats.front;
@@ -209,6 +211,7 @@ double Registrar::medianStud()
     }
 }
 
+// records the longest student wait time 
 int Registrar::longestStud() 
 {
     if(medianArrCount == 0) 
@@ -221,6 +224,7 @@ int Registrar::longestStud()
     }
 }
 
+// records when a student waits for over 10 ticks 
 int Registrar::overTenStud() 
 {
     if(medianArrCount == 0) 
@@ -235,13 +239,14 @@ int Registrar::overTenStud()
         {
             if(medianArray[i] > 10) 
             {
-                ++temp;
+                temp++;
             }
         }
         return temp;
     }
 }
 
+// mean window idle time 
 double Registrar::meanIdle() 
 {
     ListNode<int> *curr = idleStats.front;
@@ -267,6 +272,7 @@ double Registrar::meanIdle()
     return minIdle;
 }
 
+// records the longest window idle time 
 int Registrar::longestIdle() 
 {
     ListNode<int> *curr = idleStats.front;
@@ -294,6 +300,7 @@ int Registrar::longestIdle()
     return(idleArray[idleArrCount - 1]);
 }
 
+// records when a window is idle for over 5 ticks 
 int Registrar::idleOverFive() 
 {
     int temp = 0;

@@ -15,6 +15,7 @@ DoublyLinkedList<DLLtemp>::~DoublyLinkedList()
 
 }
 
+// insert node at back 
 template <class DLLtemp>
 void DoublyLinkedList<DLLtemp>::insertBack(DLLtemp d) 
 {
@@ -34,6 +35,7 @@ void DoublyLinkedList<DLLtemp>::insertBack(DLLtemp d)
     size++;
 }
 
+// removes front node 
 template <class DLLtemp>
 DLLtemp DoublyLinkedList<DLLtemp>::removeFront() 
 {
@@ -64,12 +66,14 @@ DLLtemp DoublyLinkedList<DLLtemp>::removeFront()
     }
 }
 
+// returns front node 
 template <class DLLtemp>
 DLLtemp DoublyLinkedList<DLLtemp>::getFront() 
 {
     return front->data;
 }
 
+// prints out list 
 template <class DLLtemp>
 void DoublyLinkedList<DLLtemp>::printList() 
 {
@@ -87,6 +91,7 @@ void DoublyLinkedList<DLLtemp>::printList()
     }
 }
 
+// deletes node and adjusts curr 
 template <class DLLtemp>
 void DoublyLinkedList<DLLtemp>::deletePos(int pos) 
 {
@@ -111,12 +116,14 @@ void DoublyLinkedList<DLLtemp>::deletePos(int pos)
     delete curr;
 }
 
+// checks if list is empty 
 template <class DLLtemp>
 bool DoublyLinkedList<DLLtemp>::isEmpty() 
 {
     return(size == 0);
 }
 
+// returns size of list 
 template <class DLLtemp>
 unsigned int DoublyLinkedList<DLLtemp>::getSize() 
 {

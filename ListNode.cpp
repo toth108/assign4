@@ -7,6 +7,7 @@ ListNode<nodeTemp>::ListNode()
 
 }
 
+// takes in data 
 template <class nodeTemp>
 ListNode<nodeTemp>::ListNode(nodeTemp d) 
 {
