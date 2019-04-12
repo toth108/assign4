@@ -1,7 +1,7 @@
 # assign4
 
-\n Maddy Toth 
-# Section 1
+Maddy Toth 
+Section 1
 11 April 2019 
 
 Tutoring Center 
