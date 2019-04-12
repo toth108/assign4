@@ -12,3 +12,4 @@ https://www.geeksforgeeks.org/basic_string-c_str-function-in-c-stl/
 http://www.cplusplus.com/reference/algorithm/sort/  
 http://www.cplusplus.com/reference/cstdlib/atoi/  
 https://en.cppreference.com/w/cpp/language/pointer  
+https://latedev.wordpress.com/2014/04/22/common-c-error-messages-2-unresolved-reference/  
