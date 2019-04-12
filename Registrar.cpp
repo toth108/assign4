@@ -44,7 +44,7 @@ bool Registrar::getFile(string file)
 
     windowArr = new Students*[totalWindows];
 
-    for(int i = 0; i < totalWindows; ++i) 
+    for(int i = 0; i < totalWindows; i++) 
     {
         Students* student = new Students();
         windowArr[i] = student;
@@ -71,7 +71,7 @@ bool Registrar::getFile(string file)
                 {
                     studentNum = atoi(line.c_str());
                         
-                    for(int i = 0; i < studentNum; ++i) 
+                    for(int i = 0; i < studentNum; i++) 
                     {
                         getline(inputFile, line);
                         lineNum++;
@@ -98,7 +98,7 @@ bool Registrar::getFile(string file)
 // keeps track of time ticks 
 bool Registrar::timer(int t) 
 {
-    for(int i = 0; i < totalWindows; ++i) 
+    for(int i = 0; i < totalWindows; i++) 
     {
         if(windowArr[i]->windowTime > 0) 
         {
@@ -172,7 +172,7 @@ double Registrar::medianStud()
         medianArray = new int[medianArrCount];
         curr = waitStats.front;
 
-        for(int i = 0; i < medianArrCount; ++i) 
+        for(int i = 0; i < medianArrCount; i++) 
         {
             medianArray[i] = curr->data;
             curr = curr->next;
@@ -235,7 +235,7 @@ int Registrar::overTenStud()
     {
         int temp = 0;
 
-        for(int i = 0; i < medianArrCount; ++i) 
+        for(int i = 0; i < medianArrCount; i++) 
         {
             if(medianArray[i] > 10) 
             {
@@ -289,7 +289,7 @@ int Registrar::longestIdle()
 
     curr = idleStats.front;
 
-    for(int i = 0; i < idleArrCount; ++i) 
+    for(int i = 0; i < idleArrCount; i++) 
     {
         idleArray[i] = curr->data;
         curr = curr->next;
@@ -305,11 +305,11 @@ int Registrar::idleOverFive()
 {
     int temp = 0;
 
-    for(int i = 0; i < idleArrCount; ++i) 
+    for(int i = 0; i < idleArrCount; i++) 
     {
         if(idleArray[i] > 5) 
         {
-            ++temp;
+            temp++;
         }
     }
 

@@ -23,7 +23,7 @@ int main(int argc, char** argv)
             {
                 int temp = 0;
     
-                for(int i = 0; i < r.totalWindows; ++i) 
+                for(int i = 0; i < r.totalWindows; i++) 
                 {
                     if((r.windowArr[i]->windowTime) < 1) 
                     {
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
                     running = false;
                 }
             }
-            for(int i = 0; i < r.totalWindows; ++i) // check for avilable window 
+            for(int i = 0; i < r.totalWindows; i++) // check for avilable window 
             {
                 Students* student; 
 
@@ -64,7 +64,7 @@ int main(int argc, char** argv)
             currTime++;
             r.timer(currTime);
         }
-        for(int i = 0; i < r.totalWindows; ++i) // idle windows 
+        for(int i = 0; i < r.totalWindows; i++) // idle windows 
         {
             if(r.windowArr[i]->idleTime > 0) 
             {
